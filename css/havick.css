@@ -1,0 +1,28 @@
+body {
+    padding-top: 5rem;
+    background: #232323;
+}
+
+
+.right {
+    float: right;
+    padding-left:75%;
+}
+
+
+.square{
+    width:30%;
+    background:purple;
+    padding-bottom: 30%;
+    float:left;
+    margin:1.66%;
+}
+
+#container{
+    width:600px;
+    margin: 0 auto;
+}
+
+h1{
+    color:antiquewhite;
+}
