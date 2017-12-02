@@ -3,6 +3,9 @@ body {
     background: #232323;
 }
 
+#message{
+    color: #232323;
+}
 
 .right {
     float: right;
@@ -25,4 +28,5 @@ body {
 
 h1{
     color:antiquewhite;
+    background-color: firebrick;
 }
