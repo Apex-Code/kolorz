@@ -9,6 +9,32 @@ var pickedColor = pickColor();
 var colorDisplay=document.getElementById("colorDisplay");
 var message = document.getElementById("message");
 var h1 = document.querySelector("h1");
+var resetButton = document.querySelector("#reset");
+
+resetButton.addEventListener("click", function(){
+   colors = generateRandomColors(6);
+   pickedColor = pickColor();
+   colorDisplay.textContent = pickedColor;
+   message.style.color = "firebrick";
+    for(i=0; i<squares.length; i++){
+        squares[i].style.backgroundColor=colors[i];
+        squares[i].addEventListener("click", function(){
+            var clickedColor = this.style.backgroundColor;
+            if(clickedColor === pickedColor){
+                message.textContent = "Correct!";
+                message.style.color="white";
+                h1.style.backgroundColor = pickedColor;
+                changeColor(pickedColor);
+                resetButton.textContent = "Play Again?";
+            } else {
+                this.style.backgroundColor = "#232323";
+                message.textContent = "Wrong, Try again!";
+                message.style.color="white";
+            }
+        });
+    }
+
+});
 
 colorDisplay.textContent = pickedColor;
 
@@ -21,6 +47,7 @@ for(i=0; i<squares.length; i++){
             message.style.color="white";
             h1.style.backgroundColor = pickedColor;
             changeColor(pickedColor);
+            resetButton.textContent = "Play Again?";
         } else {
             this.style.backgroundColor = "#232323";
             message.textContent = "Wrong, Try again!";
@@ -36,7 +63,7 @@ function changeColor(color){
 }
 
 function pickColor(){
-    var rnd = Math.floor(Math.random() * range + 1);
+    var rnd = Math.floor(Math.random() * range );
     return colors[rnd];
 }
 
@@ -46,7 +73,7 @@ function generateRandomColors(num){
     for(var i = 0; i < num; i++ ){
         randColorz.push(generateRandomRgb());
     }
-    return randColorz;
+    return randColorz.filter(String);
 }
 
 function generateRandomRgb(){

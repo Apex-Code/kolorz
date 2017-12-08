@@ -4,7 +4,7 @@ body {
 }
 
 #message{
-    color: #232323;
+    color: firebrick;
 }
 
 .right {
@@ -29,4 +29,10 @@ body {
 h1{
     color:antiquewhite;
     background-color: firebrick;
+}
+
+#stripe{
+    background-color: firebrick;
+    text-align: center;
+    height:60px;
 }
