@@ -1,5 +1,4 @@
 body {
-    padding-top: 3.5rem;
     background: #232323;
     margin:0;
     font-family: "Avenir", "Monserrat";
@@ -12,10 +11,6 @@ body {
     font-size:1.5em;
 }
 
-.right {
-    float: right;
-    padding-left:75%;
-}
 
 
 .square{
@@ -33,6 +28,7 @@ body {
 #container{
     width: 50vw;
     margin: 20px auto;
+
 }
 
 h1{
