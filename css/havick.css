@@ -36,3 +36,7 @@ h1{
     text-align: center;
     height:60px;
 }
+
+.selected{
+    background-color: blue;
+}
