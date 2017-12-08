@@ -19,8 +19,6 @@ resetButton.addEventListener("click", function(){
 
 theGame(6);
 
-
-
 function changeColor(color){
     for(var i=0; i<squares.length; i++){
         squares[i].style.backgroundColor = color;

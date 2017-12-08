@@ -19,14 +19,17 @@ body {
     padding-bottom: 30%;
     float:left;
     margin:1.66%;
+    border-radius: 18%;
 }
 
 #container{
-    width:600px;
+    padding-top:3rem;
+    width: 50vw;
     margin: 0 auto;
 }
 
 h1{
+    text-align: center;
     color:antiquewhite;
     background-color: firebrick;
 }
