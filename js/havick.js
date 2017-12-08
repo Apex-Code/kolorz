@@ -1,14 +1,7 @@
 // Built by Havick
 // Last modification:12/02/2017
 
-var colors = [
-    "rgb(255, 0, 0)",
-    "rgb(255, 255, 0)",
-    "rgb(255, 0, 255)",
-    "rgb(0, 255, 0)",
-    "rgb(0, 0, 255)",
-    "rgb(112, 255, 255)"
-];
+var colors = generateRandomColors(6);
 
 var range = colors.length;
 var squares = document.getElementsByClassName("square");
@@ -45,4 +38,20 @@ function changeColor(color){
 function pickColor(){
     var rnd = Math.floor(Math.random() * range + 1);
     return colors[rnd];
+}
+
+function generateRandomColors(num){
+    var randColorz = [];
+
+    for(var i = 0; i < num; i++ ){
+        randColorz.push(generateRandomRgb());
+    }
+    return randColorz;
+}
+
+function generateRandomRgb(){
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return "rgb("+ r + ", "+ g + ", " + b + ")";
 }
