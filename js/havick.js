@@ -64,10 +64,11 @@ hardButton.addEventListener("click", function() {
 });
 
 function theGame(num){
+    message.textContent = "";
     colors = generateRandomColors(num);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
-    message.style.color = "firebrick";
+
     for(i=0; i<squares.length; i++){
         if(colors[i]) {
             squares[i].style.backgroundColor = colors[i];
@@ -79,17 +80,18 @@ function theGame(num){
             var clickedColor = this.style.backgroundColor;
             if(clickedColor === pickedColor){
                 message.textContent = "Correct!";
-                message.style.color="white";
+
                 h1.style.backgroundColor = pickedColor;
                 changeColor(pickedColor);
                 resetButton.textContent = "Play Again?";
             } else {
                 this.style.backgroundColor = "#232323";
                 message.textContent = "Wrong, Try again!";
-                message.style.color="white";
+
             }
         });
         h1.style.background = "firebrick";
         resetButton.textContent = "New Colors"
+
     }
 }
